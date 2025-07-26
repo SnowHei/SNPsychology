@@ -57,7 +57,7 @@ Site responsivo e profissional sobre gestão mental e controle emocional no ambi
 6. Acompanhe suas estatísticas
 
 ### Exercícios Disponíveis:
-- Respiração 4-7-8
+- Respiração 4-6-8
 - Meditação 5 Minutos
 - Observação Consciente
 - Pausa Digital
