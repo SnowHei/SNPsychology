@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma - SNPsychology</title>
+    <meta name="description" content="Crie seu cronograma personalizado de exercícios de gestão mental e controle emocional para o trabalho.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🧠</div>
+                SNPsychology
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="tecnicas.html">Técnicas</a></li>
+                <li><a href="cronograma.html" class="active">Cronograma</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h1>Seu Cronograma Personalizado</h1>
+                <p>Crie uma rotina diária de exercícios de gestão mental e controle emocional adaptada ao seu trabalho.</p>
+            </div>
+        </section>
+
+        <!-- Schedule Creator -->
+        <section class="content-section">
+            <div class="schedule-container">
+                <div class="schedule-form">
+                    <h2 style="text-align: center; margin-bottom: 30px; color: var(--text-color);">Criar Novo Exercício</h2>
+                    
+                    <form id="scheduleForm">
+                        <div class="form-group">
+                            <label for="exerciseType">Tipo de Exercício:</label>
+                            <select id="exerciseType" required>
+                                <option value="">Selecione um exercício</option>
+                                <option value="respiracao-478">Respiração 4-6-8</option>
+                                <option value="meditacao-5min">Meditação 5 Minutos</option>
+                                <option value="observacao-consciente">Observação Consciente</option>
+                                <option value="pausa-digital">Pausa Digital</option>
+                                <option value="tecnica-stop">Técnica STOP</option>
+                                <option value="termometro-emocional">Termômetro Emocional</option>
+                                <option value="reset-mental">Reset Mental</option>
+                                <option value="alongamento">Alongamento Energizante</option>
+                                <option value="foco-laser">Foco Laser (15min)</option>
+                                <option value="caminhada-mindful">Caminhada Mindful</option>
+                                <option value="diario-emocional">Diário Emocional</option>
+                                <option value="reframe-positivo">Reframe Positivo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exerciseTime">Horário:</label>
+                            <input type="time" id="exerciseTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exerciseFrequency">Frequência:</label>
+                            <select id="exerciseFrequency" required>
+                                <option value="">Selecione a frequência</option>
+                                <option value="diario">Diário</option>
+                                <option value="segunda-sexta">Segunda a Sexta</option>
+                                <option value="3x-semana">3x por Semana</option>
+                                <option value="2x-semana">2x por Semana</option>
+                                <option value="semanal">Semanal</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn">Adicionar ao Cronograma</button>
+                    </form>
+                </div>
+
+                <!-- Schedule Display -->
+                <div class="schedule-list">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h2 style="color: var(--text-color);">Meu Cronograma</h2>
+                        <button id="clearSchedule" class="btn btn-danger btn-small">Limpar Tudo</button>
+                    </div>
+                    
+                    <div id="scheduleItems">
+                        <div style="text-align: center; color: #64748B; padding: 40px;">
+                            <p>Nenhum exercício adicionado ainda.</p>
+                            <p>Use o formulário acima para criar sua rotina personalizada!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="schedule-list" style="margin-top: 30px;">
+                    <h3 style="color: var(--text-color); margin-bottom: 20px;">Estatísticas</h3>
+                    <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                        <div class="card" style="text-align: center; padding: 20px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📅</div>
+                            <h4>Total de Exercícios</h4>
+                            <p id="totalExercises" style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">0</p>
+                        </div>
+                        <div class="card" style="text-align: center; padding: 20px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
+                            <h4>Concluídos Hoje</h4>
+                            <p id="completedToday" style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">0</p>
+                        </div>
+                        <div class="card" style="text-align: center; padding: 20px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🔥</div>
+                            <h4>Sequência</h4>
+                            <p id="streak" style="font-size: 1.5rem; font-weight: bold; color: var(--secondary-color);">0 dias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="cards-section">
+            <div class="section-container">
+                <h2 class="section-title">Dicas para Manter a Consistência</h2>
+                <div class="cards-grid">
+                    <div class="card fade-in">
+                        <div class="card-icon primary">⏰</div>
+                        <h3>Comece Pequeno</h3>
+                        <p>Inicie com 2-3 exercícios por dia. É melhor ser consistente com poucos exercícios do que falhar com muitos.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-icon secondary">🔔</div>
+                        <h3>Use Lembretes</h3>
+                        <p>Configure alarmes no seu celular ou use aplicativos de lembrete para não esquecer dos seus exercícios.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-icon accent">📈</div>
+                        <h3>Acompanhe o Progresso</h3>
+                        <p>Marque os exercícios como concluídos e observe suas estatísticas para manter a motivação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise Descriptions -->
+        <section class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Descrição dos Exercícios</h2>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h4>🌬️ Respiração 4-6-8</h4>
+                        <p>Inspire por 4s, segure por 6s, expire por 8s. Repita 4 vezes. Ideal para reduzir ansiedade.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>🧘 Meditação 5 Minutos</h4>
+                        <p>Sente-se confortavelmente e foque na respiração. Quando a mente divagar, retorne gentilmente ao foco.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>👁️ Observação Consciente</h4>
+                        <p>Observe um objeto por 2 minutos, notando detalhes, texturas e cores. Treina a atenção plena.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>📱 Pausa Digital</h4>
+                        <p>2 minutos sem telas. Respire profundamente e observe o ambiente ao redor.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>🛡️ Técnica STOP</h4>
+                        <p>Stop, Take a breath, Observe, Proceed. Use quando se sentir estressado ou sobrecarregado.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>🌡️ Termômetro Emocional</h4>
+                        <p>Avalie sua emoção de 1-10. Se > 7, use técnicas de respiração antes de decisões importantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Transforme Sua Rotina Hoje!</h2>
+                <p>Comece com exercícios simples e veja a diferença na sua produtividade e bem-estar.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                    <a href="tecnicas.html" class="cta-button">Ver Todas as Técnicas</a>
+                    <a href="contato.html" class="cta-button">Precisa de Ajuda?</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <div class="logo-icon">🧠</div>
+                        SNPsychology
+                    </div>
+                    <p>Transforme sua vida profissional através da gestão mental e controle emocional.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="tecnicas.html">Técnicas</a></li>
+                        <li><a href="cronograma.html">Cronograma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="tecnicas.html">Exercícios Práticos</a></li>
+                        <li><a href="cronograma.html">Cronograma Diário</a></li>
+                        <li><a href="contato.html">Suporte</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📧 contato@snpsychology.com</p>
+                    <p>📱 (11) 99999-9999</p>
+                    <p>📍 Paraná</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SNPsychology. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/schedule.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - SNPsychology</title>
+    <meta name="description" content="Entre em contato conosco para dúvidas sobre gestão mental e controle emocional no trabalho.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🧠</div>
+                SNPsychology
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="tecnicas.html">Técnicas</a></li>
+                <li><a href="cronograma.html">Cronograma</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h1>Entre em Contato</h1>
+                <p>Estamos aqui para ajudar você em sua jornada de desenvolvimento pessoal e profissional.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section">
+            <div class="section-container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>Fale Conosco</h2>
+                        <p>Tem dúvidas sobre as técnicas? Precisa de orientação personalizada? Nossa equipe está pronta para ajudar você a alcançar seus objetivos de bem-estar mental no trabalho.</p>
+                        
+                        <div style="margin: 30px 0;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white;">📧</div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p style="color: #64748B; margin: 0;">contato@snpsychology.com</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--secondary-color), var(--accent-color)); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white;">📱</div>
+                                <div>
+                                    <h4>Telefone</h4>
+                                    <p style="color: #64748B; margin: 0;">(11) 99999-9999</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white;">📍</div>
+                                <div>
+                                    <h4>Localização</h4>
+                                    <p style="color: #64748B; margin: 0;">PR - Brasil</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white;">⏰</div>
+                                <div>
+                                    <h4>Horário de Atendimento</h4>
+                                    <p style="color: #64748B; margin: 0;">Segunda a Sexta: 9h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-form">
+                        <h3 style="text-align: center; margin-bottom: 20px;">Envie sua Mensagem</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome Completo:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Assunto:</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="duvidas-tecnicas">Dúvidas sobre Técnicas</option>
+                                    <option value="cronograma-personalizado">Cronograma Personalizado</option>
+                                    <option value="consultoria">Consultoria Empresarial</option>
+                                    <option value="parcerias">Parcerias</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensagem:</label>
+                                <textarea id="message" name="message" rows="5" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; font-family: inherit; resize: vertical;" required placeholder="Descreva sua dúvida ou necessidade..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="cards-section">
+            <div class="section-container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h4>❓ Como começar com as técnicas?</h4>
+                        <p>Recomendamos começar com 2-3 exercícios simples como respiração 4-7-8 e meditação de 5 minutos. Use nosso cronograma para organizar sua rotina.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>⏱️ Quanto tempo preciso dedicar por dia?</h4>
+                        <p>Apenas 15-30 minutos por dia já fazem diferença significativa. O importante é a consistência, não a duração.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>🏢 Posso fazer no ambiente de trabalho?</h4>
+                        <p>Sim! Muitas técnicas são discretas e podem ser feitas na mesa de trabalho, como respiração consciente e pausa digital.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>📈 Quando verei resultados?</h4>
+                        <p>Muitas pessoas relatam melhoria no foco e redução do estresse já na primeira semana de prática consistente.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>💼 Oferecem consultoria empresarial?</h4>
+                        <p>Sim! Desenvolvemos programas personalizados de bem-estar mental para empresas. Entre em contato para mais informações.</p>
+                    </div>
+                    <div class="technique-card">
+                        <h4>📱 Existe um aplicativo?</h4>
+                        <p>Atualmente oferecemos o cronograma web. Estamos desenvolvendo um aplicativo móvel que será lançado em breve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Recursos Adicionais</h2>
+                <div class="cards-grid">
+                    <div class="card fade-in">
+                        <div class="card-icon primary">📚</div>
+                        <h3>Material de Apoio</h3>
+                        <p>Acesse nossos guias em PDF, vídeos explicativos e materiais complementares para aprofundar seu conhecimento.</p>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Baixar Materiais →</a>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-icon secondary">👥</div>
+                        <h3>Comunidade</h3>
+                        <p>Junte-se à nossa comunidade online para trocar experiências, tirar dúvidas e manter a motivação.</p>
+                        <a href="#" style="color: var(--secondary-color); text-decoration: none; font-weight: 600;">Participar →</a>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-icon accent">🎯</div>
+                        <h3>Consultoria Personalizada</h3>
+                        <p>Sessões individuais ou em grupo para desenvolver estratégias específicas para suas necessidades profissionais.</p>
+                        <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Agendar →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Vamos Começar Sua Transformação?</h2>
+                <p>Não espere mais para melhorar sua qualidade de vida no trabalho. Comece hoje mesmo!</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                    <a href="cronograma.html" class="cta-button">Criar Cronograma</a>
+                    <a href="tecnicas.html" class="cta-button">Ver Técnicas</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <div class="logo-icon">🧠</div>
+                        SNPsychology
+                    </div>
+                    <p>Transforme sua vida profissional através da gestão mental e controle emocional.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="tecnicas.html">Técnicas</a></li>
+                        <li><a href="cronograma.html">Cronograma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="tecnicas.html">Exercícios Práticos</a></li>
+                        <li><a href="cronograma.html">Cronograma Diário</a></li>
+                        <li><a href="contato.html">Suporte</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📧 contato@snpsychology.com</p>
+                    <p>📱 (11) 99999-9999</p>
+                    <p>📍 Paraná</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SNPsychology. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
+
