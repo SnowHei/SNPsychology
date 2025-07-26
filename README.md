@@ -46,24 +46,6 @@ Site responsivo e profissional sobre gestão mental e controle emocional no ambi
 - Footer com informações adicionais
 - Breadcrumbs visuais
 
-## Como Usar
-
-### Abrir o Site:
-1. Extraia todos os arquivos
-2. Abra `index.html` em qualquer navegador moderno
-3. Ou use um servidor local para melhor experiência
-
-### Servidor Local (Recomendado):
-```bash
-# Python 3
-python -m http.server 8000
-
-# Node.js (se tiver instalado)
-npx serve .
-
-# Então acesse: http://localhost:8000
-```
-
 ## Funcionalidades Interativas
 
 ### Cronograma Personalizado:
